@@ -1,0 +1,14 @@
+[package]
+name = "wasm-astar"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+
+[dependencies]
+getrandom = { version = "0.2.8", features = ["js"] }
+noise = "0.8.2"
+rand = "0.8.5"
+wasm-bindgen = "0.2.84"
