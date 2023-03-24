@@ -1,0 +1,16 @@
+{
+  "name": "wasm-astar",
+  "version": "0.1.0",
+  "files": [
+    "wasm_astar_bg.wasm",
+    "wasm_astar.js",
+    "wasm_astar_bg.js",
+    "wasm_astar.d.ts"
+  ],
+  "module": "wasm_astar.js",
+  "types": "wasm_astar.d.ts",
+  "sideEffects": [
+    "./wasm_astar.js",
+    "./snippets/*"
+  ]
+}
