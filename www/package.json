@@ -11,12 +11,15 @@
   "devDependencies": {
     "@wasm-tool/wasm-pack-plugin": "^1.6.0",
     "copy-webpack-plugin": "^11.0.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.2",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
     "http-server": "^14.1.1",
-    "wasm-astar": "file:pkg"
+    "two.js": "^0.8.10",
+    "wasm-astar": "file:./pkg"
   }
 }
