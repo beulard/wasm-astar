@@ -11,27 +11,28 @@ module.exports = {
   mode: "development",
   plugins: [
     new CopyWebpackPlugin({
-        patterns: ['index.html']
+      patterns: ['index.html']
     }),
     new WasmPackPlugin({
-        crateDirectory: path.resolve(__dirname, "../"),
-        outDir: path.resolve(__dirname, "./pkg"),
-        outName: "wasm_astar",
+      crateDirectory: path.resolve(__dirname, "../"),
+      outDir: path.resolve(__dirname, "./pkg"),
+      extraArgs: '--target bundler',
+      outName: "wasm_astar",
     }),
   ],
-    experiments: {
-        asyncWebAssembly: true
-    },
-    module: {
-      rules: [
-        {
-          test: /\.tsx?$/,
-          use: 'ts-loader',
-          exclude: /node_modules/,
-        }
-      ]
-    },
-    resolve: {
-      extensions: ['.tsx', '.ts', '.js', '.wasm']
-    }
+  experiments: {
+    asyncWebAssembly: true
+  },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js', '.wasm']
+  }
 };
